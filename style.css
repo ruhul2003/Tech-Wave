@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    background-color: #1A0B2E;
+}
+
+nav{
+    background-color: #1A0B2E;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+nav button{
+    background-color: #fff;
+    color: #1A0B2E;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    background: #2A7B9B;
+    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+}
+
+.logo{
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.logo span{
+    color: #f301fc;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li{
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.banner{
+    background: url('./assets/hero-bg.png');
+    height: 760px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+}
+.banner .img2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -93%);
+}
+.banner .new{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, -640%);
+    background-color: #58dd0b;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.banner .texts{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.texts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.texts h1{
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.texts p{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.texts button{
+    background-color: #fff;
+    color: #1A0B2E;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.texts .buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.line{
+    margin: 0 auto;
+    border: 1px solid #463e3e;
+}
+.texts .buttons .spotify {
+    background-color: #fff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    background: #b82c82;
+    background: linear-gradient(90deg, rgba(184, 44, 130, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+}
+.texts .buttons .subscribe{
+    background-color: transparent;
+    color: green;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid green;
+}
