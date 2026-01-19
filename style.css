@@ -441,58 +441,79 @@ footer p{
 
 
 /* Media Queries */
-@media (max-width: 576px) {
 
+/* Small devices (max-width: 576px) */
+@media (max-width: 576px) {
     nav {
         width: 100%;
         flex-direction: column;
         gap: 15px;
-        padding: 15px;
+        padding: 15px 20px;
+        position: relative;
     }
 
-    .menu ul {
-        flex-direction: column;
-        gap: 10px;
+    nav::after {
+        content: "";
+        width: 32px;
+        height: 32px;
+        background: url("./assets/hamburger-menu.png") center/contain no-repeat;
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
     }
 
-    nav button {
-        width: 100%;
+    .menu, nav button {
+        display: none;
     }
 
     .banner {
-        height: 600px;
+        height: 520px;
+        overflow: hidden;
+        position: relative;
     }
 
     .banner img {
-        width: 200px;
+        width: 170px;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .banner .img2 {
-        width: 120px;
+        width: 80px;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .banner .new {
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         font-size: 14px;
-        padding: 6px 16px;
-        transform: translate(40%, -500%);
+        padding: 6px 14px;
+    }
+
+    .banner .texts {
+        top: 78%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        padding: 0 15px;
     }
 
     .texts h1 {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .texts p {
         font-size: 14px;
-        padding: 0 15px;
+        text-align: center;
     }
 
-    .texts .buttons {
+    .texts .buttons, .texts button {
         flex-direction: column;
         gap: 12px;
-        width: 100%;
-    }
-
-    .texts button {
         width: 100%;
     }
 
@@ -504,19 +525,102 @@ footer p{
         font-size: 28px;
     }
 
-    .ratings {
+    .ratings, .cards, .video-cards, .card-host {
         flex-direction: column;
-        gap: 30px;
         width: 100%;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .ratings {
+        gap: 30px;
     }
 
     .box h1 {
         font-size: 36px;
     }
+
+    .why {
+        padding-top: 50px;
+    }
+
+    .why h1, .episodes h1, .host h1 {
+        font-size: 28px;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .cards > div {
+        padding: 20px;
+    }
+
+    .cards img {
+        width: 50px;
+    }
+
+    .video1 {
+        width: 100%;
+    }
+
+    .video1 iframe {
+        width: 100%;
+        height: 220px;
+    }
+
+    .video1 h2 {
+        font-size: 18px;
+    }
+
+    .video1 p, .texts2 p {
+        font-size: 14px;
+    }
+
+    .card-host {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .card-host img {
+        width: 100px;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .texts2 h1 {
+        font-size: 1.5rem;
+    }
+
+    .icons img {
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+    }
+
+    footer h1 {
+        font-size: 32px;
+    }
+
+    footer p {
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .social {
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
+/* Medium devices (576px - 992px) */
 @media (min-width: 576px) and (max-width: 992px) {
-
     nav {
         width: 90%;
     }
@@ -556,45 +660,6 @@ footer p{
     .box {
         width: 45%;
     }
-}
-
-@media (max-width: 576px) {
-
-    .why {
-        padding-top: 50px;
-    }
-
-    .why h1 {
-        font-size: 28px;
-        padding: 0 15px;
-    }
-
-    .cards {
-        width: 100%;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 15px;
-    }
-
-    .cards > div {
-        padding: 20px;
-    }
-
-    .card1,
-    .card2,
-    .card3,
-    .card4,
-    .card5 {
-        grid-column: auto;
-        grid-row: auto;
-    }
-
-    .cards img {
-        width: 50px;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 992px) {
 
     .why h1 {
         font-size: 38px;
@@ -608,103 +673,11 @@ footer p{
 
     .card1 {
         grid-column: span 2;
-        grid-row: auto;
-    }
-
-    .card2,
-    .card3,
-    .card4,
-    .card5 {
-        grid-column: span 1;
     }
 
     .cards > div {
         padding: 25px;
     }
-}
-
-@media (max-width: 576px) {
-
-    .episodes h1 {
-        font-size: 28px;
-        text-align: center;
-    }
-
-    .video-cards {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        width: 100%;
-        padding: 0 15px;
-    }
-
-    .video1 {
-        width: 100%;
-    }
-
-    .video1 iframe {
-        width: 100%;
-        height: 220px;
-    }
-
-    .video1 h2 {
-        font-size: 18px;
-    }
-
-    .video1 p {
-        font-size: 14px;
-    }
-
-    .host h1 {
-        font-size: 28px;
-    }
-
-    .card-host {
-        flex-direction: column;
-        width: 100%;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .card-host img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .texts2 {
-        align-items: center;
-    }
-
-    .texts2 h1 {
-        font-size: 24px;
-    }
-
-    .texts2 p {
-        font-size: 14px;
-        text-align: center;
-    }
-
-    .icons {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    footer h1 {
-        font-size: 32px;
-    }
-
-    .social {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    footer p {
-        text-align: center;
-        padding: 0 15px;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 992px) {
 
     .video-cards {
         flex-wrap: wrap;
@@ -718,7 +691,6 @@ footer p{
     }
 
     .video1 iframe {
-        width: 100%;
         height: 250px;
     }
 
@@ -728,190 +700,9 @@ footer p{
     }
 
     .card-host img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .texts2 h1 {
-        font-size: 28px;
-    }
-
-    footer h1 {
-        font-size: 40px;
-    }
-
-    .social {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-@media (max-width: 576px) {
-
-    .menu {
-        display: none;
-    }
-
-    nav button {
-        display: none;
-    }
-
-    nav {
-        position: relative;
-        width: 100%;
-        padding: 15px 20px;
-    }
-
-    nav::after {
-        content: "";
-        width: 32px;
-        height: 32px;
-        background-image: url("./assets/hamburger-menu.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: absolute;
-        right: 20px;
-        cursor: pointer;
-    }
-}
-
-@media (max-width: 900px) {
-
-    header,
-    section,
-    .why,
-    .episodes,
-    .host,
-    footer {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-    nav,
-    .about,
-    .cards,
-    .ratings,
-    .video-cards,
-    .card-host {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .cards {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .video-cards {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .video1 {
-        max-width: 100%;
-    }
-
-    .video1 iframe {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .card-host img {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 576px) {
-
-    .banner {
-        height: 520px;
-        overflow: hidden;
-    }
-
-    .banner img {
-        width: 220px;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .banner .img2 {
-        width: 140px;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .banner .new {
-        top: 25%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 14px;
-        padding: 6px 14px;
-    }
-
-    .banner .texts {
-        top: 78%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        padding: 0 15px;
-    }
-
-    .texts h1 {
-        font-size: 28px;
-    }
-
-    .texts p {
-        font-size: 14px;
-        text-align: center;
-    }
-}
-@media (max-width: 576px) {
-
-    .banner img {
-        width: 170px;
-    }
-
-    .banner .img2 {
-        width: 80px;
-    }
-}
-
-@media (max-width: 980px) and (min-width: 576px) {
-
-    .banner img {
-        width: 300px;
-    }
-
-    .banner .img2 {
-        width: 100px;
-    }
-}
-/* Default / Large devices (>992px) */
-.card-host img {
-    width: 150px;
-    height: auto;
-    border-radius: 10px;
-}
-
-.icons img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-
-/* Medium devices (576px – 992px) */
-@media (min-width: 576px) and (max-width: 992px) {
-    .card-host img {
         width: 130px;
-    }
-
-    .icons img {
-        width: 35px;
-        height: 35px;
-        margin-right: 8px;
+        height: auto;
+        border-radius: 10px;
     }
 
     .texts2 h1 {
@@ -921,31 +712,51 @@ footer p{
     .texts2 p {
         font-size: 1rem;
     }
-}
 
-/* Small devices (≤576px) */
-@media (max-width: 576px) {
-    .card-host {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .card-host img {
-        width: 100px;
-        margin-bottom: 15px;
+    footer h1 {
+        font-size: 40px;
     }
 
     .icons img {
-        width: 30px;
-        height: 30px;
-        margin-right: 5px;
+        width: 35px;
+        height: 35px;
+        margin-right: 8px;
     }
 
-    .texts2 h1 {
-        font-size: 1.5rem;
+    .social {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Wider small devices (576px - 980px) */
+@media (min-width: 576px) and (max-width: 980px) {
+    .banner img {
+        width: 300px;
     }
 
-    .texts2 p {
-        font-size: 0.9rem;
+    .banner .img2 {
+        width: 100px;
+    }
+}
+
+/* Almost all smaller than 900px */
+@media (max-width: 900px) {
+    header, section, .why, .episodes, .host, footer {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    nav, .about, .cards, .ratings, .video-cards, .card-host {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .cards, .video-cards {
+        padding: 0 15px;
+    }
+
+    .video1, .video1 iframe, .card-host img {
+        max-width: 100%;
     }
 }
