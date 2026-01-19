@@ -119,8 +119,13 @@ nav button{
     gap: 20px;
 }
 .line{
-    margin: 0 auto;
+    margin: 0px auto;
     border: 1px solid #463e3e;
+}
+.line2{
+    margin: 10px auto;
+    border: 1px solid #463e3e;
+    width: 80%;
 }
 .texts .buttons .spotify {
     background-color: #fff;
@@ -141,4 +146,152 @@ nav button{
     cursor: pointer;
     background: transparent;
     border: 1px solid green;
+}
+
+.about{
+    /* width: 80%; */
+    padding:0 100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1A0B2E;
+    color: #fff;
+}
+.about h1{
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.about p{
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #817272;
+}
+.about span{
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #817272;
+}
+.ratings{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px auto;
+    width: 80%;
+}
+.box h1{
+    font-size: 48px;
+    color: #00ff88;
+    margin-bottom: 20px;
+}
+.box span{
+    font-size: 16px;
+    color: #817272;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.why{
+    padding-top: 70px;
+    background-color: rgb(29, 10, 54);
+    color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+.why h1{
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+    padding: 20px;
+    width: 80%;
+    margin-top: 50px ;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cards > div {
+    background-color: #1a0b2e;
+    border-radius: 24px;
+    padding: 30px;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    color: white;
+    gap: 20px;
+}
+
+.card1 {
+    grid-row: span 2;
+}
+
+.card2, .card3 {
+    grid-column: span 2;
+}
+
+.card4 {
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .card1, .card2, .card3, .card4 {
+        grid-row: auto;
+        grid-column: auto;
+    }
+}
+
+.card1 h2{
+    margin-top: 20px;
+}
+.card1 p{
+    margin-top: 20px;
+    color: #b8a4a4;
+}
+.card2 h2{
+    margin-top: 20px;
+}
+.card2 p{
+    margin-top: 20px;
+    color: #b8a4a4;
+}
+.card3 h2{
+    margin-top: 20px;
+}
+.card3 p{
+    margin-top: 20px;
+    color: #b8a4a4;
+}
+.card4 h2{
+    margin-top: 20px;
+}
+.card4 p{
+    margin-top: 20px;
+    color: #b8a4a4;
+}
+.card5 h2{
+    margin-top: 20px;
+}
+.card5 p{
+    margin-top: 20px;
+    color: #b8a4a4;
+}
+
+.episodes{
+    background-color: #1A0B2E;
+    color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
 }
